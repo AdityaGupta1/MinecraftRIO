@@ -1,0 +1,16 @@
+[
+{
+  "modid": "minecraft-rio",
+  "name": "MinecraftRIO",
+  "description": "Controls a roboRIO (FRC robot) through Minecraft.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Aditya Gupta"],
+  "credits": "biggie smalls ft. thomas the tank engine",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
