@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraftrio:blocks/power_cube",
+    "top": "minecraftrio:blocks/power_cube_top",
+    "side": "minecraftrio:blocks/power_cube"
+  }
+}

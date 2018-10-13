@@ -1,6 +1,6 @@
 [
 {
-  "modid": "minecraft-rio",
+  "modid": "minecraftrio",
   "name": "MinecraftRIO",
   "description": "Controls a roboRIO (FRC robot) through Minecraft.",
   "version": "${version}",
