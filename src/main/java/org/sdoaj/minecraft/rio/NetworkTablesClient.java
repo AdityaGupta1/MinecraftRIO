@@ -3,15 +3,24 @@ package org.sdoaj.minecraft.rio;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
+import edu.wpi.first.networktables.NetworkTableValue;
 
 public class NetworkTablesClient {
+    private NetworkTable table;
+
+    private static NetworkTablesClient instance = new NetworkTablesClient();
+    private NetworkTablesClient() {};
+
+    public static NetworkTablesClient getInstance() {
+        return instance;
+    }
+
     public void run() {
         NetworkTableInstance instance = NetworkTableInstance.getDefault();
         instance.startClientTeam(254);
         instance.startDSClient(); // gets robot IP from driver station
 
-        NetworkTable table = instance.getTable("minecraft");
-        NetworkTableEntry testEntry = table.getEntry("test");
+        table = instance.getTable("minecraft");
 
         while (true) {
             try {
@@ -20,8 +29,10 @@ public class NetworkTablesClient {
                 System.out.println("interrupted");
                 return;
             }
-
-            System.out.println(testEntry.getValue().getValue());
         }
+    }
+
+    public NetworkTableValue getValue(String key) {
+        return table.getEntry(key).getValue();
     }
 }

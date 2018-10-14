@@ -25,7 +25,7 @@ public class Main {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         proxy.init(event);
-        // new NetworkTablesClient().run();
+        // NetworkTablesClient.getInstance().run();
    }
 
     @EventHandler
