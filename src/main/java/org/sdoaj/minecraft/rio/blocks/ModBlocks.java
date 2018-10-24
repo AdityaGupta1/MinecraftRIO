@@ -10,7 +10,7 @@ import java.util.List;
 public class ModBlocks {
     public static final List<BlockWithModel> blocks = new ArrayList<>();
 
-    public static final BlockBasic power_cube = new BlockBasic("power_cube", Material.CLOTH,
+    public static final BlockBasic POWER_CUBE = new BlockBasic("power_cube", Material.CLOTH,
             0.8f, 4.0f, "pickaxe", 1);
 
     @SideOnly(Side.CLIENT)

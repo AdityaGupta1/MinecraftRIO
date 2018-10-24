@@ -1,9 +1,9 @@
 package org.sdoaj.minecraft.rio;
 
 import edu.wpi.first.networktables.NetworkTable;
-import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.networktables.NetworkTableValue;
+import org.sdoaj.minecraft.rio.constants.Constants;
 
 public class NetworkTablesClient {
     private NetworkTable table;
@@ -24,7 +24,7 @@ public class NetworkTablesClient {
 
         while (true) {
             try {
-                Thread.sleep(Constants.kLoopDt);
+                Thread.sleep(Constants.loopDt);
             } catch (InterruptedException ex) {
                 System.out.println("interrupted");
                 return;
@@ -32,7 +32,11 @@ public class NetworkTablesClient {
         }
     }
 
-    public NetworkTableValue getValue(String key) {
+    public NetworkTableValue get(String key) {
         return table.getEntry(key).getValue();
+    }
+
+    public void set(String key, Object value) {
+        table.getEntry(key).setValue(value);
     }
 }
